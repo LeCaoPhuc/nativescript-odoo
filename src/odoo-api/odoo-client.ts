@@ -43,7 +43,7 @@ export class OdooClient {
         return localStorage.getItem(OdooLocalStorageKey.SERVER_URL);
     }
 
-    private setCurrentUser(user: OdooUser) {
+    public setCurrentUser(user: OdooUser) {
         localStorage.setItem(OdooLocalStorageKey.CURRENT_USER, JSON.stringify(user));
     }
 
@@ -57,7 +57,7 @@ export class OdooClient {
         return null;
     }
 
-    private setSessionId(sessionId): OdooClient {
+    public setSessionId(sessionId): OdooClient {
         localStorage.setItem(OdooLocalStorageKey.SESSION_ID, sessionId);
         return this;
     }
